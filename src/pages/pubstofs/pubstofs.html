@@ -1,0 +1,38 @@
+<!--
+  Generated template for the PubstofsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color='Trackouss'>
+    <ion-title>Publication d'image</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div style=" margin-top: 20%;">
+    <div>
+      <button ion-button full (click)="selectImage()" color = "primary">Ajouter Image</button>
+    </div>
+    <p><img [src]="{{pick}}" alt=""></p>
+    <div>
+      <button ion-button full (click)="pickImage()" color="primary">Prendre photos</button>
+    </div>
+    <p><img [src]="{{select}}" alt=""></p>
+    <div>
+  <ion-list>
+    <ion-item>
+      <textarea name="description" placeholder="Commentez la photo" cols="30" rows="10"></textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Type de Publication</ion-label>
+      <ion-select value="publicaton">
+        <ion-option value="tous">Partager avec tous</ion-option>
+        <ion-option value="amis">Uniquement mes amis</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  </div>
+  </div>
+    </ion-content>

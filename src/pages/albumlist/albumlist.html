@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AlbumlistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color = 'Trackouss'>
+    <ion-title>Listes d'albums</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="col-md-3 col-sm-4 col-sm-4 col-xs-6" *ngFor="let album of Albums"
+    (click)="showArtisteDetail(album)">
+    <div class="card"
+      style="width: 45%; height: 40%; margin-top: 15px; margin-left: 5px; border: 15px; border-color: #0ac1e3">
+      <div class="post-preview__image-container post-preview__image-container--transparent-small">
+        <img [src]="album.photoAlbum" class="card-img-top" alt="">
+      </div>
+      <h5 class='card-text card__title truncate' style="color: #ee1212">{{album.nomAlbum}}</h5>
+      <p class="card-text"><b>{{album.nombreAudios}}</b></p>
+      <p class="card-text"><b>{{album.nombreVideaos}}</b></p>
+
+    </div>
+  </ion-card>
+</ion-content>
+
